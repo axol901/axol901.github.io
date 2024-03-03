@@ -1,13 +1,18 @@
+/* universal body rules */
+/* choice of color inspired by discord, for both good contrast and readability */
 body {
 	background-color: #3a3e42;
 	color: #f6f6f6;
 }
 
+/* page title rules */
+/* tahoma is used because it is available on most platforms, simple, and easily readable */
 h1 {
 	font-family: Tahoma, sans-serif;
 	font-style: normal;
 }
 
+/* navigation rules */
 nav {
 	font-family: Tahoma, sans-serif;
 	font-style: normal;
@@ -43,6 +48,7 @@ nav a:active {
 	font-weight: bold;
 }
 
+/* paragraph rules */
 p {
 	font-family: Tahoma, sans-serif;
 	font-style: normal;
