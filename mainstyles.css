@@ -24,23 +24,23 @@ nav a {
 	text-align: center;
 }
 
-a:link {
+nav a:link {
 	color: #f6f6f6;
 	text-shadow: 0 0 50% blue;
 }
 
-a:visited {
+nav a:visited {
 	color: #f6f6f6;
 	text-shadow: 0 0 50% purple;
 }
 
-a:hover {
+nav a:hover {
 	background-color: #646a70;
 	color: #f6f6f6;
 	text-shadow: 0 0 50% blue;
 }
 
-a:active {
+nav a:active {
 	background-color: #f6f6f6;
 	color: #646a70;
 	font-weight: bold;
