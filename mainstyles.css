@@ -26,23 +26,25 @@ nav a {
 
 a:link {
 	color: #f6f6f6;
-	text-shadow: 0 0 3px blue;
+	text-shadow: 0 0 50% blue;
 }
 
 a:visited {
 	color: #f6f6f6;
-	text-shadow: 0 0 3px purple;
+	text-shadow: 0 0 50% purple;
 }
 
 a:hover {
+	background-color: #646a70;
 	color: #f6f6f6;
-	text-shadow: 0 0 5px blue;
+	text-shadow: 0 0 50% blue;
 }
 
 a:active {
-	color: #f6f6f6;
+	background-color: #f6f6f6;
+	color: #646a70;
 	font-weight: bold;
-	text-shadow: 0 0 5px purple;
+	text-shadow: 0 0 50% purple;
 }
 
 p {
