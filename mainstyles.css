@@ -1,4 +1,9 @@
 body {
 	background-color: #3a3e42;
 	color: lightgray;
+	
+	@font-face {
+		font-family: "Tahoma", sans-serif;
+		font-style: normal;
+	}
 }
