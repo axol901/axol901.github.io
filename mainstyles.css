@@ -25,26 +25,22 @@ nav a {
 }
 
 nav a:link {
-	color: blue;
-	text-shadow: 0 0 50% #f6f6f6;
+	/*color: blue;*/
 }
 
 nav a:visited {
-	color: purple;
-	text-shadow: 0 0 50% #f6f6f6;
+	/*color: purple;*/
 }
 
 nav a:hover {
 	background-color: #646a70;
 	color: #f6f6f6;
-	text-shadow: 0 0 50% #f6f6f6;
 }
 
 nav a:active {
 	background-color: #f6f6f6;
 	color: #646a70;
 	font-weight: bold;
-	text-shadow: 0 0 50% #f6f6f6;
 }
 
 p {
