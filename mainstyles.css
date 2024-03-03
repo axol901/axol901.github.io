@@ -25,11 +25,11 @@ nav a {
 }
 
 nav a:link {
-	/*color: blue;*/
+	color: #f6f6f6;
 }
 
 nav a:visited {
-	/*color: purple;*/
+	color: #f6f6f6;
 }
 
 nav a:hover {
