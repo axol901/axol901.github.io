@@ -26,6 +26,28 @@ nav li {
 	text-align: center;
 }
 
+a:link {
+	color: #f6f6f6;
+	text-shadow: 0 0 3px blue;
+}
+
+a:visited {
+	color: #f6f6f6;
+	text-shadow: 0 0 3px purple;
+}
+
+a:hover {
+	color: #f6f6f6;
+	text-shadow: 0 0 3px blue;
+	text-decoration-line: underline;
+}
+
+a:active {
+	color: #f6f6f6;
+	text-shadow: 0 0 3px purple;
+	text-decoration-line: underline;
+}
+
 p {
 	font-family: Tahoma, sans-serif;
 	font-style: normal;
