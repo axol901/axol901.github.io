@@ -7,7 +7,7 @@
 		
 		<!--- Page-specific styles --->
 		<style>
-			.inputpair {
+			.inlineelement {
 				display: inline-block;
 				right-padding: 20px;
 			}
@@ -25,24 +25,34 @@
 		
 		<!--- Page-specific script --->
 		<script>
-			//on loading the form, check the hasSubmitted variable
+			//on clicking the reset button, display the reset message and real reset button
+			function resetMessage()
+			{
+				document.getElementById('resetmessage').style.display='block';
+				document.getElementById('submessage').style.display='none';
+			}
+			
+			//hide the reset message and real reset button
+			function hideResetMessage()
+			{
+				document.getElementById('resetmessage').style.display='none';
+			}
+			
+			//on clicking the submit button, display the submission message and real submit button
 			function subMessage()
 			{
-				var hasSubmitted = sessionStorage.getItem("hasSubmitted");
-				
-				//if the user has submitted a message this session, display the submission message and reset the variable
-				if (hasSubmitted != null)
-				{
-					document.getElementById('submessage').style.display='block';
-					document.getElementById('contactform').style.display='none';
-					
-					//resetting the variable allows the user to submit another message upon next visit
-					sessionStorage.setItem("hasSubmitted", null);
-				}
+				document.getElementById('submessage').style.display='block';
+				document.getElementById('resetmessage').style.display='none';
+			}
+			
+			//hide the reset message and real reset button
+			function hideSubMessage()
+			{
+				document.getElementById('resetmessage').style.display='none';
 			}
 		</script>
 	</head>
-	<body onload="subMessage()">
+	<body>
 		<h1>Contact Me</h1>
 		
 		<nav>
@@ -60,11 +70,11 @@
 				<!--- The contact form --->
 				<form id="contactform" onsubmit="alert("return delaySubmit()">
 					<!--- Pair the first and last name labels and fields to display them adjacent to each other --->
-					<div class="inputpair">
+					<div class="inlineelement">
 						<label for="fname">First Name:</label><br>
 						<input type="text" id="fname" name="fname">
 					</div>
-					<div class="inputpair">
+					<div class="inlineelement">
 						<label for="lname">Last Name:</label><br>
 						<input type="text" id="lname" name="lname">
 					</div>
@@ -81,14 +91,28 @@
 					
 					<br><br>
 					
-					<input type="hidden" id="hasSubmitted" name="hasSubmitted" value="false">
-					<input type="submit" value="Send Message">
-				</form>
+					
+					<div class="inlineelement">
+						<input type="button" onclick="subMessage()">Submit</button>
+					</div>
+					<div class="inlineelement">
+						<input type="button" onclick="resetMessage()">Reset</button>
+					</div>
 				
-				<!--- Message box that appears when the contact form is submitted --->
-				<div id="submessage">
-					<p>Your message has been submitted.</p>
-				</div>
+					<!--- Message box that appears when the reset button is pressed --->
+					<div id="resetmessage">
+						<p>Reset form?</p><br>
+						<input type="reset" value="Yes">
+						<input type="button" onclick="resetMessage()">Cancel</button>
+					</div>
+				
+					<!--- Message box that appears when the submit buttom is pressed --->
+					<div id="submessage">
+						<p>Send Message?</p><br>
+						<input type="submit" value="Yes">
+						<input type="button" onclick="hideSubMessage()">Cancel</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</body>
