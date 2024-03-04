@@ -54,13 +54,12 @@ p {
 	font-style: normal;
 }
 
-/* body column rules *//*
+/* body column rules */
 .body {
 	display: flex;
-}*/
+}
 
 .column {
-	float: left;
 	padding: 10px;
 }
 
