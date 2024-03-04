@@ -54,4 +54,21 @@ p {
 	font-style: normal;
 }
 
+/* body column rules */
+.body {
+  display: flex;
+}
+
+.column {
+  padding: 10px;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
 /* image rules */
