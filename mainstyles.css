@@ -73,3 +73,21 @@ p {
 }
 
 /* image rules */
+
+/* form rules */
+label {
+	font-family: Tahoma, sans-serif;
+	font-style: normal;
+}
+
+input {
+	font-family: Tahoma, sans-serif;
+	font-style: normal;
+	color: "black";
+}
+
+textarea {
+	font-family: Tahoma, sans-serif;
+	font-style: normal;
+	color: "black";
+}
