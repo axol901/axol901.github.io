@@ -12,6 +12,14 @@
 				right-padding: 20px;
 			}
 			
+			.hiddenmenu {
+				display: none;
+				color: #f6f6f6;
+				font-family: Tahoma, sans-serif;
+				padding: 10px;
+				text-align: center;
+			}
+			
 			#submessage {
 				display: none;
 				border-radius: 2em;
@@ -81,33 +89,31 @@
 					
 					<br><br>
 					
+					<!--- Email Field --->
 					<label for="email">Email Address:</label><br>
 					<input type="email" id="email" name="email">
 					
 					<br><br>
 					
+					<!--- Message Field --->
 					<label for="message">Message:</label><br>
 					<textarea name="message" rows="10" style="width:60%;"></textarea>
 					
 					<br><br>
 					
-					
-						<input type="button" onclick="subMessage()">Submit</button>
-						<input type="button" onclick="resetMessage()">Reset</button>
-					<div class="inlineelement">
-					</div>
-					<div class="inlineelement">
-					</div>
+					<!--- Submit and Reset Buttons --->
+					<input type="button" onclick="subMessage()">Submit</button>
+					<input type="button" onclick="resetMessage()">Reset</button>
 				
 					<!--- Message box that appears when the reset button is pressed --->
-					<div id="resetmessage" style="display:none;">
+					<div id="resetmessage" class="hiddenmenu">
 						<p>Reset form?</p><br>
 						<input type="reset" value="Yes">
 						<input type="button" onclick="resetMessage()">Cancel</button>
 					</div>
 				
 					<!--- Message box that appears when the submit buttom is pressed --->
-					<div id="submessage" style="display:none;">
+					<div id="submessage" class="hiddenmenu">
 						<p>Send Message?</p><br>
 						<input type="submit" value="Yes">
 						<input type="button" onclick="hideSubMessage()">Cancel</button>
