@@ -41,14 +41,11 @@
 				}
 			}
 			
-			//on submitting the form, delay the submission to save the variable
-			function delaySubmit()
-			{
-				sessionStorage.setItem("hasSubmitted", 1);
-				
-				return false;
-			}
+			$('input[type="submit"][value="Search"]').click(function() {
+			sessionStorage.setItem("hasSubmitted", 'true');
+			});
 		</script>
+		<script src="jquery.js"/>
 	</head>
 	<body onload="subMessage()">
 		<h1>Contact Me</h1>
@@ -89,6 +86,7 @@
 					
 					<br><br>
 					
+					<input type="hidden" id="hasSubmitted" name="hasSubmitted" value="false">
 					<input type="submit" value="Send Message">
 				</form>
 				
