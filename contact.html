@@ -59,7 +59,7 @@
 			</div>
 			<div class="column right">
 				<!--- The contact form --->
-				<form id="contactform">
+				<form id="contactform" onsubmit="sessionStorage.setItem("hasSubmitted", 1)">
 					<!--- Pair the first and last name labels and fields to display them adjacent to each other --->
 					<div class="inputpair">
 						<label for="fname">First Name:</label><br>
@@ -82,7 +82,7 @@
 					
 					<br><br>
 					
-					<input type="submit" value="Send Message" onclick="sessionStorage.setItem("hasSubmitted", 1)">
+					<input type="submit" value="Send Message">
 				</form>
 				
 				<!--- Message box that appears when the contact form is submitted --->
