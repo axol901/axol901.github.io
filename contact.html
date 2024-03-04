@@ -20,33 +20,7 @@
 		</style>
 		
 		<!--- Page-specific script --->
-		<script>
-			//on clicking the reset button, display the reset message and real reset button
-			function resetMessage()
-			{
-				document.getElementById('resetmessage').style.display='block';
-				document.getElementById('submessage').style.display='none';
-			}
-			
-			//hide the reset message and real reset button
-			function hideResetMessage()
-			{
-				document.getElementById('resetmessage').style.display='none';
-			}
-			
-			//on clicking the submit button, display the submission message and real submit button
-			function subMessage()
-			{
-				document.getElementById('submessage').style.display='block';
-				document.getElementById('resetmessage').style.display='none';
-			}
-			
-			//hide the reset message and real reset button
-			function hideSubMessage()
-			{
-				document.getElementById('submessage').style.display='none';
-			}
-		</script>
+		<script src="contactform.js"></script>
 	</head>
 	<body>
 		<h1>Contact Me</h1>
@@ -64,28 +38,28 @@
 			</div>
 			<div class="column right">
 				<!--- The contact form --->
-				<form id="contactform" onsubmit="alert("return delaySubmit()">
+				<form id="contactform" onsubmit="return checkForm()">
 					<!--- Pair the first and last name labels and fields to display them adjacent to each other --->
 					<div class="inlineelement">
 						<label for="fname">First Name:</label><br>
-						<input type="text" id="fname" name="fname">
+						<input type="text" id="fname" name="fname" required>
 					</div>
 					<div class="inlineelement">
 						<label for="lname">Last Name:</label><br>
-						<input type="text" id="lname" name="lname">
+						<input type="text" id="lname" name="lname" required>
 					</div>
 					
 					<br><br>
 					
 					<!--- Email Field --->
 					<label for="email">Email Address:</label><br>
-					<input type="email" id="email" name="email">
+					<input type="email" id="email" name="email" required>
 					
 					<br><br>
 					
 					<!--- Message Field --->
 					<label for="message">Message:</label><br>
-					<textarea name="message" rows="10" style="width:60%;"></textarea>
+					<textarea name="message" id="message" rows="10" style="width:60%;"></textarea>
 					
 					<br><br>
 					
