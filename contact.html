@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
-		<title>Contact Me Page</title>
+		<title>Contact Me</title>
 		<link rel = "stylesheet" href = "mainstyles.css">
 		
 		<!--- Page-specific styles --->
@@ -10,7 +10,22 @@
 			.inputpair {
 				display: inline-block;
 			}
+			
+			#submessage {
+				display: none;
+				border-radius: 2em;
+				border: 2px solid #646a70;
+				color: #f6f6f6;
+				font-family: Tahoma, sans-serif;
+				padding: 10px;
+				text-align: center;
+			}
 		</style>
+		
+		<!--- Page-specific script --->
+		<script>
+			
+		</script>
 	</head>
 	<body>
 		<h1>Contact Me</h1>
@@ -18,7 +33,7 @@
 		<nav>
 			<a href = "index.html">Home</a> 
 			<a href = "about.html">About Me</a>
-			<a href = "contact.html">Contact Me</a>
+			<a href = "contact.html" style="background-color: #f6f6f6;color: #646a70;font-weight: bold;">Contact Me</a>
 		</nav>
 		
 		<br><br>
@@ -27,7 +42,8 @@
 			<div class="column left">
 			</div>
 			<div class="column right">
-				<form>
+				<!--- The contact form --->
+				<form id="contactform">
 					<!--- Pair the first and last name labels and fields to display them adjacent to each other --->
 					<div class="inputpair">
 						<label for="fname">First Name:</label><br>
@@ -53,6 +69,11 @@
 					
 					<input type="submit" value="Send Message">
 				</form>
+				
+				<!--- Message box that appears when the contact form is submitted --->
+				<div id="submessage" style="">
+					<p>Your message has been submitted.</p>
+				</div>
 			</div>
 		</div>
 	</body>

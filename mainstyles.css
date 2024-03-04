@@ -54,7 +54,7 @@ p {
 	font-style: normal;
 }
 
-/* body column rules */
+/* column rules */
 .body {
 	display: flex;
 	flex-direction: row;
