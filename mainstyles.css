@@ -10,6 +10,7 @@ body {
 h1 {
 	font-family: Tahoma, sans-serif;
 	font-style: normal;
+	left-padding: 20px;
 }
 
 /* navigation rules */

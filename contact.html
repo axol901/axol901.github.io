@@ -29,7 +29,6 @@
 			function subMessage()
 			{
 				var hasSubmitted = sessionStorage.getItem("hasSubmitted");
-				//alert(hasSubmitted)
 				
 				//if the user has submitted a message this session, display the submission message and reset the variable
 				if (hasSubmitted != null)
@@ -40,6 +39,14 @@
 					//resetting the variable allows the user to submit another message upon next visit
 					sessionStorage.setItem("hasSubmitted", null);
 				}
+			}
+			
+			//on submitting the form, delay the submission to save the variable
+			function delaySubmit()
+			{
+				sessionStorage.setItem("hasSubmitted", 1);
+				
+				return false;
 			}
 		</script>
 	</head>
@@ -59,7 +66,7 @@
 			</div>
 			<div class="column right">
 				<!--- The contact form --->
-				<form id="contactform" onsubmit="alert("Success"); sessionStorage.setItem("hasSubmitted", 1)">
+				<form id="contactform" onsubmit="alert("return delaySubmit()">
 					<!--- Pair the first and last name labels and fields to display them adjacent to each other --->
 					<div class="inputpair">
 						<label for="fname">First Name:</label><br>
