@@ -24,9 +24,25 @@
 		</style>
 		
 		<!--- Page-specific script --->
-		<script src="contactform.js"></script>
+		<script>
+			//on loading the form, check the hasSubmitted variable
+			function subMessage()
+			{
+				var hasSubmitted = sessionStorage.getItem("hasSubmitted");
+				
+				//if the user has submitted a message this session, display the submission message and reset the variable
+				if (hasSubmitted != null && hasSubmitted > 0)
+				{
+					document.getElementById('submessage').style.display='block';
+					document.getElementById('contactform').style.display='none';
+					
+					//resetting the variable allows the user to submit another message upon next visit
+					sessionStorage.setItem("hasSubmitted", 0);
+				}
+			}
+		</script>
 	</head>
-	<body onload="">
+	<body onload="subMessage()">
 		<h1>Contact Me</h1>
 		
 		<nav>
@@ -66,7 +82,7 @@
 					
 					<br><br>
 					
-					<input type="submit" value="Send Message" onclick="hasSubmitted = 1">
+					<input type="submit" value="Send Message" onclick="sessionStorage.setItem("hasSubmitted", 1)">
 				</form>
 				
 				<!--- Message box that appears when the contact form is submitted --->
