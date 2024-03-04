@@ -87,7 +87,7 @@ input {
 	color: "black";
 }
 
-.button {
+input.button {
 	font-family: Tahoma, sans-serif;
 	font-style: normal;
 	color: "black";
