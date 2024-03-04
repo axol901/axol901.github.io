@@ -90,21 +90,21 @@
 					<br><br>
 					
 					<!--- Submit and Reset Buttons --->
-					<input type="button" onclick="subMessage()" class="button">Submit</button>
-					<input type="button" onclick="resetMessage()">Reset</button>
+					<input type="button" onclick="subMessage()" value="Submit">
+					<input type="button" onclick="resetMessage()" value="Submit">
 				
 					<!--- Message box that appears when the reset button is pressed --->
 					<div id="resetmessage" class="hiddenmenu">
 						<p>Reset form?</p><br>
 						<input type="reset" value="Yes">
-						<input type="button" onclick="resetMessage()">Cancel</button>
+						<input type="button" onclick="resetMessage()" value="Submit">
 					</div>
 				
 					<!--- Message box that appears when the submit buttom is pressed --->
 					<div id="submessage" class="hiddenmenu">
 						<p>Send message?</p><br>
 						<input type="submit" value="Yes">
-						<input type="button" onclick="hideSubMessage()">Cancel</button>
+						<input type="button" onclick="hideSubMessage()" value="Submit">
 					</div>
 				</form>
 			</div>
