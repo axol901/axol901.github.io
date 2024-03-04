@@ -28,6 +28,7 @@
 			//on loading the form, check the hasSubmitted variable
 			function subMessage()
 			{
+				alert("function called")
 				var hasSubmitted = sessionStorage.getItem("hasSubmitted");
 				
 				//if the user has submitted a message this session, display the submission message and reset the variable
@@ -77,8 +78,7 @@
 					<br><br>
 					
 					<label for="message">Message:</label><br>
-					<textarea name="message" rows="10" style="width:60%;">
-					</textarea>
+					<textarea name="message" rows="10" style="width:60%;"></textarea>
 					
 					<br><br>
 					
