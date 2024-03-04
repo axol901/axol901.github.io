@@ -87,12 +87,6 @@ input {
 	color: "black";
 }
 
-input[type="button"] {
-	font-family: Tahoma, sans-serif;
-	font-style: normal;
-	color: "black";
-}
-
 textarea {
 	font-family: Tahoma, sans-serif;
 	font-style: normal;
