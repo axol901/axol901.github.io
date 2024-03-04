@@ -44,7 +44,7 @@
 			//hide the reset message and real reset button
 			function hideSubMessage()
 			{
-				document.getElementById('resetmessage').style.display='none';
+				document.getElementById('submessage').style.display='none';
 			}
 		</script>
 	</head>
@@ -96,7 +96,7 @@
 					<!--- Message box that appears when the reset button is pressed --->
 					<div id="resetmessage" class="hiddenmenu">
 						<p>Reset form?</p><br>
-						<input type="reset" value="Yes">
+						<input type="reset" value="Yes" onclick="hideResetMessage()">
 						<input type="button" onclick="hideResetMessage()" value="Cancel">
 					</div>
 				
