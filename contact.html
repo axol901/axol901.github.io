@@ -28,8 +28,8 @@
 			//on loading the form, check the hasSubmitted variable
 			function subMessage()
 			{
-				alert("function called")
 				var hasSubmitted = sessionStorage.getItem("hasSubmitted");
+				alert(hasSubmitted)
 				
 				//if the user has submitted a message this session, display the submission message and reset the variable
 				if (hasSubmitted != null && hasSubmitted > 0)
