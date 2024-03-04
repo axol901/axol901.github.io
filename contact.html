@@ -21,12 +21,14 @@
 			<a href = "contact.html">Contact Me</a>
 		</nav>
 		
+		<br><br>
 		<!--- Use div to produce columns using flexbox --->
 		<div class="body">
 			<div class="column left">
 			</div>
 			<div class="column right">
 				<form>
+					<!--- Pair the first and last name labels and fields to display them adjacent to each other --->
 					<div class="inputpair">
 						<label for="fname">First Name:</label><br>
 						<input type="text" id="fname" name="fname">
@@ -35,6 +37,15 @@
 						<label for="lname">Last Name:</label><br>
 						<input type="text" id="lname" name="lname">
 					</div>
+					<br>
+					
+					<label for="email">Email Address:</label><br>
+					<input type="email" id="email" name="email">
+					<br>
+					
+					<label for="message">Message:</label><br>
+					<textarea name="message" style="width:60%;height:20%;">
+					
 				</form>
 			</div>
 		</div>
