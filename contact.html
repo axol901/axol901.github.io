@@ -4,6 +4,13 @@
 		<meta charset = "utf-8">
 		<title>Contact Me Page</title>
 		<link rel = "stylesheet" href = "mainstyles.css">
+		
+		<!--- Page-specific styles --->
+		<style>
+			.inputpair {
+				display: inline-block;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Contact Me</h1>
@@ -14,6 +21,22 @@
 			<a href = "contact.html">Contact Me</a>
 		</nav>
 		
-		<p>I'm hosted with GitHub Pages.</p>
+		<!--- Use div to produce columns using flexbox --->
+		<div class="body">
+			<div class="column left">
+			</div>
+			<div class="column right">
+				<form>
+					<div class="inputpair">
+						<label for="fname">First Name:</label><br>
+						<input type="text" id="fname" name="fname">
+					</div>
+					<div class="inputpair">
+						<label for="lname">Last Name:</label><br>
+						<input type="text" id="lname" name="lname">
+					</div>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
