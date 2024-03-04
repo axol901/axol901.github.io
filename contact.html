@@ -32,13 +32,13 @@
 				alert(hasSubmitted)
 				
 				//if the user has submitted a message this session, display the submission message and reset the variable
-				if (hasSubmitted != null && hasSubmitted > 0)
+				if (hasSubmitted != null)
 				{
 					document.getElementById('submessage').style.display='block';
 					document.getElementById('contactform').style.display='none';
 					
 					//resetting the variable allows the user to submit another message upon next visit
-					sessionStorage.setItem("hasSubmitted", 0);
+					sessionStorage.setItem("hasSubmitted", null);
 				}
 			}
 		</script>
