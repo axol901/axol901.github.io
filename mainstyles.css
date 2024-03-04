@@ -57,6 +57,7 @@ p {
 /* body column rules */
 .body {
 	display: flex;
+	flex-direction: row;
 }
 
 .column {
@@ -64,11 +65,11 @@ p {
 }
 
 .left {
-	width: 50%;
+	width: 20%;
 }
 
 .right {
-	width: 50%;
+	width: 80%;
 }
 
 /* image rules */
