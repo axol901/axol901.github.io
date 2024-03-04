@@ -24,7 +24,12 @@
 		
 		<!--- Page-specific script --->
 		<script>
-			
+			//on submitting the form, hide the contact form and display the submission message
+			function subMessage()
+			{
+				document.getElementById('submessage').style.display='block'
+				document.getElementById('contactform').style.display='none'
+			}
 		</script>
 	</head>
 	<body>
@@ -67,11 +72,11 @@
 					
 					<br><br>
 					
-					<input type="submit" value="Send Message">
+					<input type="submit" value="Send Message" onclick="">
 				</form>
 				
 				<!--- Message box that appears when the contact form is submitted --->
-				<div id="submessage" style="">
+				<div id="submessage">
 					<p>Your message has been submitted.</p>
 				</div>
 			</div>
