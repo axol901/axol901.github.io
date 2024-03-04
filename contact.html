@@ -9,6 +9,7 @@
 		<style>
 			.inputpair {
 				display: inline-block;
+				right-padding: 20px;
 			}
 			
 			#submessage {
@@ -24,15 +25,21 @@
 		
 		<!--- Page-specific script --->
 		<script>
-			//on submitting the form, hide the contact form and display the submission message
+			//on submitting the form, hide the contact form and display the submission message, then update the hasSubmitted variable
+			
+			var hasSubmitted = 0;
+			
 			function subMessage()
 			{
-				document.getElementById('submessage').style.display='block'
-				document.getElementById('contactform').style.display='none'
+				if (hasSubmitted > 0)
+				{
+					document.getElementById('submessage').style.display='block';
+					document.getElementById('contactform').style.display='none';
+				}
 			}
 		</script>
 	</head>
-	<body>
+	<body onload="">
 		<h1>Contact Me</h1>
 		
 		<nav>
@@ -72,7 +79,7 @@
 					
 					<br><br>
 					
-					<input type="submit" value="Send Message" onclick="">
+					<input type="submit" value="Send Message" onclick="hasSubmitted = 1">
 				</form>
 				
 				<!--- Message box that appears when the contact form is submitted --->
