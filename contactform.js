@@ -6,7 +6,7 @@
 			{
 				if (hasSubmitted > 0)
 				{
-					alert(Your message has been submitted.</);
+					alert("Your message has been submitted.");
 					document.getElementById('submessage').style.display='block';
 					document.getElementById('contactform').style.display='none';
 				}
