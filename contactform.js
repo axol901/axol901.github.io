@@ -28,10 +28,10 @@ function hideSubMessage()
 function checkForm()
 {
 	//check for strings containing only white space
-	if (document.getElementById('fname').value.replaceAll(" ", '').length != 0) {alert("First name must not be empty."); return false}
-	if (document.getElementById('lname').value.replaceAll(" ", '').length != 0) {alert("Last name must not be empty."); return false}
-	if (document.getElementById('email').value.replaceAll(" ", '').length != 0) {alert("Email must not be empty."); return false}
-	if (document.getElementById('message').value.replaceAll(" ", '').length != 0) {alert("Message must not be empty."); return false}
+	if (document.getElementById('fname').value.replaceAll(" ", '').length == 0) {alert("First name must not be empty."); return false}
+	if (document.getElementById('lname').value.replaceAll(" ", '').length == 0) {alert("Last name must not be empty."); return false}
+	if (document.getElementById('email').value.replaceAll(" ", '').length == 0) {alert("Email must not be empty."); return false}
+	if (document.getElementById('message').value.replaceAll(" ", '').length == 0) {alert("Message must not be empty."); return false}
 	
 	//check if names contain invalid characters
 	var fnameLow = document.getElementById('fname').value.toLowerCase();										//create string containing only lowercase letters to simplify process
