@@ -53,13 +53,13 @@ function checkForm()
 	if (email.length < 5) {alert("Invalid Email."); return false}												//email must contain at least 5 characters
 	
 	if (!email.includes('&#64;')) {alert("Invalid Email."); return false}											//check for @
-	if (email.indexOf('@') == 0) {alert("Invalid Email."); return false}										//@ cannot be the first character
-	if(email.indexOf('@') > email.length - 3) {alert("Invalid Email."); return false}							//@ cannot be within the last 3 characters
-	if(email.indexOf('@') != email.lastIndexOf('&#64;')) {alert("Invalid Email."); return false}				//@ must only be included once
+	if (email.indexOf('&#64;') == 0) {alert("Invalid Email."); return false}										//@ cannot be the first character
+	if(email.indexOf('&#64;') > email.length - 3) {alert("Invalid Email."); return false}							//@ cannot be within the last 3 characters
+	if(email.indexOf('&#64;') != email.lastIndexOf('&#64;')) {alert("Invalid Email."); return false}				//@ must only be included once
 	
-	if(!email.includes('.')) {alert("Invalid Email."); return false}	 										//check for .
-	if(email.indexOf('.') <= email.indexOf('@') + 1) {alert("Invalid Email."); return false}					//. must appear at least one character after @
-	if(email.indexOf('.') >= email.length - 1) {alert("Invalid Email."); return false}		 					//. cannot be the last character
+	if(!email.includes('&#46;')) {alert("Invalid Email."); return false}	 										//check for .
+	if(email.indexOf('&#46;') <= email.indexOf('&#64;') + 1) {alert("Invalid Email."); return false}					//. must appear at least one character after @
+	if(email.indexOf('&#46;') >= email.length - 1) {alert("Invalid Email."); return false}		 					//. cannot be the last character
 	
 	//most errors should be checked for by this point
 	return true;
