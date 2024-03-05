@@ -37,6 +37,7 @@ function checkForm()
 	var fnameLow = document.getElementById('fname').value.toLowerCase();										//create string containing only lowercase letters to simplify process
 	for (const char of fnameLow)
 	{
+		console.log(char);
 		if (char < "a" || char > "z" && char != "-") {alert("First name must only contain letters."); return false}
 	}
 	
