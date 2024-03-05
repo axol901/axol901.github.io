@@ -52,7 +52,7 @@ function checkForm()
 	var email = document.getElementById('message').value.replaceAll(/\s/g, '');									//assign email to a variable and trim white space
 	if (email.length < 5) {alert("Invalid Email."); return false}												//email must contain at least 5 characters
 	
-	if (!email.includes('@')) {alert("Invalid Email @."); return false}											//check for @
+	if (!email.includes('&#64;')) {alert("Invalid Email."); return false}											//check for @
 	if (email.indexOf('@') == 0) {alert("Invalid Email."); return false}										//@ cannot be the first character
 	if(email.indexOf('@') > email.length - 3) {alert("Invalid Email."); return false}							//@ cannot be within the last 3 characters
 	if(email.indexOf('@') != email.lastIndexOf('&#64;')) {alert("Invalid Email."); return false}				//@ must only be included once
