@@ -47,21 +47,6 @@ function checkForm()
 		if (char < "a" || char > "z" && char != "-") {alert("Last name must only contain letters."); return false}
 	}
 	
-	//check (very roughly) if email is valid
-	//NOTE: This code may be redundant due to the required attribute.
-	/*
-	var email = document.getElementById('message').value.replaceAll(/\s/g, '');									//assign email to a variable and trim white space
-	if (email.length < 5) {alert("Invalid Email (1)."); return false}											//email must contain at least 5 characters
-	
-	if (!email.includes("@")) {alert("Invalid Email (2)."); return false}										//check for @
-	if (email.indexOf("@") == 0) {alert("Invalid Email (3)."); return false}									//@ cannot be the first character
-	if (email.indexOf("@") > email.length - 3) {alert("Invalid Email (4)."); return false}						//@ cannot be within the last 3 characters
-	if (email.indexOf("@") != email.lastIndexOf("@")) {alert("Invalid Email (5)."); return false}				//@ must only be included once
-	
-	if (!email.includes(".")) {alert("Invalid Email (6)."); return false}	 									//check for .
-	if (email.indexOf(".") <= email.indexOf("@") + 1) {alert("Invalid Email (7)."); return false}				//. must appear at least one character after @
-	if (email.indexOf(".") >= email.length - 1) {alert("Invalid Email (8)."); return false}		 				//. cannot be the last character
-	*/
 	//most errors should be checked for by this point
 	return true;
 }
