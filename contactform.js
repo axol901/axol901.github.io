@@ -37,13 +37,13 @@ function checkForm()
 	var fnameLow = document.getElementById('fname').value.toLowerCase();										//create string containing only lowercase letters to simplify process
 	for (const char of fnameLow)
 	{
-		if (char >= "a" && char <= "z" || char == "-") {alert("First name must only contain letters."); return false}
+		if (char < "a" && char > "z" || char != "-") {alert("First name must only contain letters."); return false}
 	}
 	
 	var lnameLow = document.getElementById('lname').value.toLowerCase();										//create string containing only lowercase letters to simplify process
 	for (const char of lnameLow)
 	{
-		if (char >= "a" && char <= "z" || char == "-") {alert("Last name must only contain letters."); return false}
+		if (char < "a" && char > "z" || char != "-") {alert("Last name must only contain letters."); return false}
 	}
 	
 	//check (very roughly) if email is valid
