@@ -50,16 +50,16 @@ function checkForm()
 	//check (very roughly) if email is valid
 	//NOTE: This code may be redundant due to the required attribute.
 	var email = document.getElementById('message').value.replaceAll(/\s/g, '');									//assign email to a variable and trim white space
-	if (email.length < 5) {alert("Invalid Email."); return false}												//email must contain at least 5 characters
+	if (email.length < 5) {alert("Invalid Email (1)."); return false}											//email must contain at least 5 characters
 	
-	if (!email.includes('&#64;')) {alert("Invalid Email."); return false}											//check for @
-	if (email.indexOf('&#64;') == 0) {alert("Invalid Email."); return false}										//@ cannot be the first character
-	if(email.indexOf('&#64;') > email.length - 3) {alert("Invalid Email."); return false}							//@ cannot be within the last 3 characters
-	if(email.indexOf('&#64;') != email.lastIndexOf('&#64;')) {alert("Invalid Email."); return false}				//@ must only be included once
+	if (!email.includes('&#64;')) {alert("Invalid Email (2)."); return false}									//check for @
+	if (email.indexOf('&#64;') == 0) {alert("Invalid Email (2)."); return false}								//@ cannot be the first character
+	if(email.indexOf('&#64;') > email.length - 3) {alert("Invalid Email (3)."); return false}					//@ cannot be within the last 3 characters
+	if(email.indexOf('&#64;') != email.lastIndexOf('&#64;')) {alert("Invalid Email (4)."); return false}		//@ must only be included once
 	
-	if(!email.includes('&#46;')) {alert("Invalid Email."); return false}	 										//check for .
-	if(email.indexOf('&#46;') <= email.indexOf('&#64;') + 1) {alert("Invalid Email."); return false}					//. must appear at least one character after @
-	if(email.indexOf('&#46;') >= email.length - 1) {alert("Invalid Email."); return false}		 					//. cannot be the last character
+	if(!email.includes('&#46;')) {alert("Invalid Email (5)."); return false}	 								//check for .
+	if(email.indexOf('&#46;') <= email.indexOf('&#64;') + 1) {alert("Invalid Email (6)."); return false}		//. must appear at least one character after @
+	if(email.indexOf('&#46;') >= email.length - 1) {alert("Invalid Email (7)."); return false}		 			//. cannot be the last character
 	
 	//most errors should be checked for by this point
 	return true;
