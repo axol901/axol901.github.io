@@ -7,12 +7,19 @@ app.use(express.static('/'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/mainstyles.css');
+});
+app.get('/index.html', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/mainstyles.css');
 });
 app.get('/about.html', (req, res) => {
     res.sendFile(__dirname + '/about.html');
+    res.sendFile(__dirname + '/mainstyles.css');
 });
 app.get('/contact.html', (req, res) => {
     res.sendFile(__dirname + '/contact.html');
+    res.sendFile(__dirname + '/mainstyles.css');
 });
 
 app.post('/submit-form', (req, res) => {
