@@ -3,23 +3,19 @@ const app = express();
 const port = 3000;
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('/'));
+app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
-    res.sendFile(__dirname + '/mainstyles.css');
 });
 app.get('/index.html', (req, res) => {
     res.sendFile(__dirname + '/index.html');
-    res.sendFile(__dirname + '/mainstyles.css');
 });
 app.get('/about.html', (req, res) => {
     res.sendFile(__dirname + '/about.html');
-    res.sendFile(__dirname + '/mainstyles.css');
 });
 app.get('/contact.html', (req, res) => {
     res.sendFile(__dirname + '/contact.html');
-    res.sendFile(__dirname + '/mainstyles.css');
 });
 
 app.post('/submit-form', (req, res) => {
