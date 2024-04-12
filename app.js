@@ -19,8 +19,15 @@ app.get('/contact.html', (req, res) => {
 });
 
 app.post('/submit-form', (req, res) => {
-    const username = req.body.username;
-    console.log('Form submitted.')
+    const fname = req.body.fname;
+    const lname = req.body.lname;
+    const email = req.body.email;
+    const message = req.body.message;
+    console.log('Form submitted.');
+    console.log('First Name: '+fname+'\n');
+    console.log('Last Name: '+lname+'\n');
+    console.log('Email: '+email+'\n');
+    console.log('Message: '+message+'\n');
     res.send(`Username is $cstable1`);
 });
 
