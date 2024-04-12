@@ -23,12 +23,12 @@ app.post('/submit-form', (req, res) => {
     const lname = req.body.lname;
     const email = req.body.email;
     const message = req.body.message;
+
     console.log('Form submitted.');
-    console.log('First Name: '+fname+'\n');
-    console.log('Last Name: '+lname+'\n');
-    console.log('Email: '+email+'\n');
-    console.log('Message: '+message+'\n');
-    res.send(`Username is $cstable1`);
+    console.log('First Name: '+fname);
+    console.log('Last Name: '+lname);
+    console.log('Email: '+email);
+    console.log('Message: '+message);
 });
 
 app.listen(port, () => {
