@@ -29,6 +29,8 @@ app.post('/submit-form', (req, res) => {
     console.log('Last Name: '+lname);
     console.log('Email: '+email);
     console.log('Message: '+message);
+    
+    res.sendFile(__dirname + '/contact.html');
 });
 
 app.listen(port, () => {
