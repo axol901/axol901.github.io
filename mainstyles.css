@@ -74,6 +74,11 @@ p {
 	width: 80%;
 }
 
+/* make paragraphs in the right column roughly centered */
+div.right p {
+	width: 75%;
+}
+
 /* form rules */
 label {
 	font-family: Tahoma, sans-serif;
