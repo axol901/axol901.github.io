@@ -53,6 +53,7 @@ nav a:active {
 p {
 	font-family: Tahoma, sans-serif;
 	font-style: normal;
+	text-indent: 4em;
 }
 
 /* column rules */
