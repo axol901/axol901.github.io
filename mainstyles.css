@@ -90,12 +90,8 @@ div.right p {
 	padding-bottom: 10px;
 }
 
-.imgpair img {
-	width: 100%;
-}
-
 /* override the change to paragraph width for image captions */
-.imgpair p {
+div.imgpair p {
 	width: 100%;
 }
 
