@@ -95,7 +95,7 @@ div.imgpair img {
 	max-width: 100%;
 }
 
-/* override the change to paragraph width for image captions and hidden menus */
+/* override the change to paragraph rules for image captions and hidden menus */
 div.imgpair p, div.hiddenmenu p {
 	width: 100%;
 	text-indent: 0em;
