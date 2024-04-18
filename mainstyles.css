@@ -91,7 +91,7 @@ div.right p {
 }
 
 .imgpair img {
-	width: inherit;
+	max-width: inherit;
 }
 
 /* override the change to paragraph width for image captions */
